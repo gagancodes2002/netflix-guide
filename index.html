@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+
+<head>
+   <script type="module" src="js/index.js"></script>
+    <script src="lib/jqery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link res="stylesheet" href="fix.css">
+ <style>
+  
+    .switch {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 17px;
+  float:right;
+  
+}
+label{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.Button
+{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  background-color: #181818;
+  padding: 10px 10px 10px 10px;
+  display: inline-block;
+  background-color:#4b4b4b ;
+  user-select: none; 
+  color: #FFFFFF;
+  width: 50%;
+  float: left;
+  text-align: center;
+  
+}
+ 
+input:checked + .slider {
+  background-color: #E50914;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #E50914;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+body{
+  
+  height: 350px;
+  width: 300px;
+  background-color: #424242;
+}  
+form{
+    padding: 20px 20px 20px 20px;
+}
+ 
+.NavBar
+{
+  background-color: #141414;
+  
+}
+ 
+.TabView
+{
+  color: rgb(238, 238, 238);
+  background-color: #424242;
+  padding: 60px 10px 10px 10px;
+  
+}
+.TabView:nth-child(4)
+{
+  display: none;
+}
+.Home
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: larger;
+  color: white;
+  background-color: #141414;
+  padding: 20px 20px 20px 20px;
+  user-select:  none;
+}
+ </style>   
+</head>
+
+<body>
+  <div class="Home">
+    Netflix IMDB 
+    <div style="font-size: small;  float: right;" >
+      <label  style="margin-right: 20px;"  for="Status">Enable</label>
+      <label   class="switch">
+        <input name="Status" type="checkbox" >
+        <span class="slider round"></span>
+      </label>
+
+    </div>
+  </div>
+  <div class="NavBar">
+    <div class="Button">Advisories Settings</div>
+    <div class="Button">Rating Settings</div>
+  </div>
+    
+
+ 
+      <div class="TabView" id="AS">
+
+   
+      <div>
+        <label for="S&N">Sex & Nudity</label>
+        <label class="switch">
+          <input name="S&N" type="checkbox" >
+          <span class="slider round"></span>
+        </label>
+  
+      </div>
+      <div>
+        <label for="V&G">Violence & Gore</label>
+        <label class="switch">
+          <input name="V&G" type="checkbox" >
+          <span class="slider round"></span>
+        </label>
+  
+      </div>
+      
+      <div>
+        <label for="AD&S">Alcohol,Drugs & Smoking</label>
+        <label class="switch">
+          <input name="AD&S" type="checkbox" >
+          <span class="slider round"></span>
+        </label>
+  
+      </div>
+      <div>
+        <label for="Profanity">Profanity</label>
+        <label class="switch">
+          <input name="Profanity" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+  
+      </div>
+      <div>
+        <label for="F&IS">Frightening & Intense Scenes</label>
+        <label class="switch">
+          <input name="F&IS" type="checkbox" >
+          <span class="slider round"></span>
+        </label>
+  
+      </div>
+
+      </div>
+      <div class="TabView" id="RS">
+
+       
+        <div>
+          <label for="IMDB">IMDB</label>
+          <label class="switch">
+            <input name="IMDB" type="checkbox" >
+            <span class="slider round"></span>
+          </label>
+    
+        </div>
+        <div>
+          <label for="RT">Rotten Tomatoes</label>
+          <label class="switch">
+            <input name="RT" type="checkbox" >
+            <span class="slider round"></span>
+          </label>
+    
+        </div>
+                
+        </div>
+
+       
+      
+     
+    
+</body>
+
+</html>
